@@ -1,11 +1,17 @@
 name: learn-github-actions
 on: push
+  branches: master
+  paths:
+    - *.md
 jobs:
-  check-bats-version:
+  produce:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install -g bats
-      - run: bats -v
+      - run: cat README.md | wc -w >> wordcount
 
+  consume:
+    needs: produce
+    steps:
+      - run: WORDS="$(cat wordcount)"
+      - run: echo "Wordcount $WORDS"
