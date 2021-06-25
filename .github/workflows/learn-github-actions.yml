@@ -23,5 +23,5 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: wc-file
-      - run: WORDS="$(cat wordcount)"
+      - run: export WORDS="$(cat wordcount)"
       - run: echo "Wordcount $WORDS"
