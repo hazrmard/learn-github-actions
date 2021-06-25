@@ -2,9 +2,9 @@ name: learn-github-actions
 on:
   push:
     branches:
-      - master
+      - 'master'
     paths:
-      - *.md
+      - '*.md'
 jobs:
   produce:
     runs-on: ubuntu-latest
