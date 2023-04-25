@@ -9,9 +9,9 @@ jobs:
   produce:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: cat README.md | wc -w >> wordcount
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: wc-file
           path: ./wordcount
@@ -20,7 +20,7 @@ jobs:
     needs: produce
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: wc-file
       - run: |
