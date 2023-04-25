@@ -5,6 +5,7 @@ on:
       - 'master'
     paths:
       - '*.md'
+      - '.github/workflows/learn-github-actions.yml'
 jobs:
   produce:
     runs-on: ubuntu-latest
