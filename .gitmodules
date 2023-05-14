@@ -1,0 +1,3 @@
+[submodule "docs/themes/sk1"]
+	path = docs/themes/sk1
+	url = https://github.com/J-Siu/hugo-theme-sk1
